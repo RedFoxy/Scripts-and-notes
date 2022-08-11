@@ -5,6 +5,18 @@
 # Use only on Debian 10/11
 # This script will install Docker and all dependeces to install Home Assistant Supervised.
 
+# How to run:
+# Download the script on the destination machine:
+# wget https://raw.githubusercontent.com/RedFoxy/Scrpit-and-notes/main/Home-Assistant/install-supervised.sh
+#
+# Make it executable:
+# chmod +x install-supervised.sh
+#
+# Than run it!
+# ./install-supervised.sh
+#
+# Please, remeber to set a static ip on your computer
+
 # Update repository
 sudo apt-get update
 # Install dependences
