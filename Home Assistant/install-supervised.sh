@@ -5,13 +5,13 @@
 # Use only on Debian 10/11
 # This script will install Docker and all dependeces to install Home Assistant Supervised.
 
-ARCH=$(uname -m)
-OSA=$(curl --silent "https://api.github.com/repos/home-assistant/os-agent/releases/latest" | jq -r .tag_name)
-
 # Update repository
 sudo apt-get update
 # Install dependences
 sudo apt-get install -y ca-certificates curl gnupg jq wget lsb-release systemd apparmor network-manager udisks2 libglib2.0-bin dbus
+
+ARCH=$(uname -m)
+OSA=$(curl --silent "https://api.github.com/repos/home-assistant/os-agent/releases/latest" | jq -r .tag_name)
 
 # Apply docker gpg key
 sudo mkdir -p /etc/apt/keyrings
@@ -43,13 +43,6 @@ wget https://github.com/home-assistant/supervised-installer/releases/latest/down
 sudo dpkg -i homeassistant-supervised.deb
 
 # Now save your data and reboot!
-# After reboot, you can check if it finish to install Home Assistant browsing http://IP-ADDRESS:8123 and checking if all container are deployed running:
-# sudo docker ps
-# than check the presence the name of container, you need to have:
-# ghcr.io/home-assistant/aarch64-hassio-supervisor
-# ghcr.io/home-assistant/raspberrypi4-64-homeassistant
-# ghcr.io/home-assistant/aarch64-hassio-multicast
-# ghcr.io/home-assistant/aarch64-hassio-observer
-# ghcr.io/home-assistant/aarch64-hassio-audio
-# ghcr.io/home-assistant/aarch64-hassio-dns
-# ghcr.io/home-assistant/aarch64-hassio-cli
+# After reboot, Home Assistant need some minutes, it depends from your hardware, to complete the deploy,
+# you can check if it finish to install Home Assistant browsing http://IP-ADDRESS:8123 and checking if at the last
+# more than 3 containers are deployed, you can check the running container using: sudo docker ps
