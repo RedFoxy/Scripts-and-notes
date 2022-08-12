@@ -7,7 +7,7 @@
 
 # How to run:
 # Download the script on the destination machine:
-# wget https://raw.githubusercontent.com/RedFoxy/Scrpit-and-notes/main/Home-Assistant/install-supervised.sh
+# wget https://raw.githubusercontent.com/RedFoxy/Scripts-and-notes/main/Home-Assistant/install-supervised.sh
 #
 # Make it executable:
 # chmod +x install-supervised.sh
