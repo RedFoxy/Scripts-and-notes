@@ -12,7 +12,7 @@
 
 ################################################################################
 #                               Download and run:                              #
-#                   curl -fsSL ha-supervised.redfoxy.it | sh                   #
+#                  curl -fsSL ha-supervised.redfoxy.it | bash                  #
 ################################################################################
 
 NEED_SUDO=`which sudo`
