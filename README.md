@@ -10,3 +10,6 @@ You can use multiple configurations to update different Dynamic DNS, supports ev
 
 # [Home Assistant](Home-Assistant/README.md)
 Collections of scripts about Home Assistant
+
+# [Bashrc](bashrc)
+Just my .bashrc, it can be useful for you to make your life easy on Debian
