@@ -1,21 +1,52 @@
+###############################################################################
+# (unofficial) Home Assistant installation script
+# v0.4 11 August 2022
+# by Massimo "RedFoxy Darrest" Ciccio'
+#
+# https://github.com/RedFoxy/Scripts-and-notes
+#
+###############################################################################
+
 #!/bin/bash
 
 # IMPORTANT!
 # Use this script as is it at your risk!
-# Use only on Debian 10/11
-# This script will install Docker and all dependeces to install Home Assistant Supervised.
+# Use only on Debian
+# This script will install Docker and all dependeces to install
+# Home Assistant Supervised.
 
 # How to run:
-# Download the script on the destination machine:
-# wget https://raw.githubusercontent.com/RedFoxy/Scrpit-and-notes/main/Home-Assistant/install-supervised.sh
 #
-# Make it executable:
-# chmod +x install-supervised.sh
-#
-# Than run it!
-# ./install-supervised.sh
+# curl -fsSL ha-supervised.redfoxy.it | sh
 #
 # Please, remeber to set a static ip on your computer
+
+echo "########################################################################"
+echo "Welcome to the (unofficial) Home Assistant installation script";
+echo "";
+echo "This script was write by Massimo \"RedFoxy Darrest\" Ciccio' and you can"
+echo "download it from https://github.com/RedFoxy/Scripts-and-notes";
+echo "";
+echo "This script can be run on different systems, as Raspberry Pi, a virtual";
+echo "machine, and computer with cpu x86/amd64 and other hardware.";
+echo "It need to be run on a computer with Debian or Raspbian or other Debian";
+echo "like operative system, this script it'll use apt to manage packages and";
+echo "it'll install Docker and about all dependences required by Home";
+echo "Assistant, this installation it's a bit invasive so if you are not sure,";
+echo "please don't continue!";
+echo "";
+echo "To cancel the script please push CTRL C on your keyboar now!";
+echo "########################################################################"
+echo "";
+
+sec=10
+
+while [ $sec -ge 0 ]; do
+ echo -ne "The installation will starts in: $sec\033[0K\r"
+ let "sec=sec-1"
+ sleep 1
+done
+
 
 # Update repository
 sudo apt-get update
