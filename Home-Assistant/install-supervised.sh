@@ -8,18 +8,6 @@
 #                                                                              !
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-################################################################################
-#                                                                              #
-#                Home Assistant Supervised installation script                 #
-#                                 (unofficial)                                 #
-#                               v0.8 22/08/2022                                #
-#                     by Massimo "RedFoxy Darrest" Ciccio'                     #
-#       WebSite: https://redfoxy.it - GitHub: https://github.com/RedFoxy       #
-#   YouTube: https://youtube.redfoxy.it - Twitter: https://twitter.redfoxy.it  #
-#                                                                              #
-################################################################################
-
 sec=20
 ShowLOG=0   # 0: Save log - 1: Print long in output
 PathLOG="/var/log/ha-supervised.log"
@@ -43,7 +31,7 @@ cat <<WELCOME
 #                                                                                                  #
 #                           Home Assistant Supervised installation script                          #
 #                                           (unofficial)                                           #
-#                                         v0.6 13/08/2022                                          #
+#                                         v0.8 22/08/2022                                          #
 #                               by Massimo "RedFoxy Darrest" Ciccio'                               #
 #                 WebSite: https://redfoxy.it - GitHub: https://github.com/RedFoxy                 #
 #            YouTube: https://youtube.redfoxy.it - Twitter: https://twitter.redfoxy.it             #
