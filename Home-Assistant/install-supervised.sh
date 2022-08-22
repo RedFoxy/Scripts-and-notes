@@ -112,7 +112,7 @@ else
 fi
 
 # Install needs
-needs="ca-certificates curl gnupg jq wget lsb-release systemd apparmor network-manager udisks2 libglib2.0-bin dbus"
+needs="ca-certificates curl gnupg jq wget lsb-release systemd inetutils-ping apparmor network-manager udisks2 libglib2.0-bin dbus"
 
 for pkg in $needs
 do
