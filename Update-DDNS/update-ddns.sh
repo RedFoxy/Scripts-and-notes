@@ -167,7 +167,6 @@ if [ "${need_upd}" = "1" ]; then
 			${CURL_PATH} -s --user "${username}:${password}" "${curl_url}"
 		fi
 	fi
-	echo  ${ip_act} > ${cache_old_ip}
 else
 	message="${dhost}: `date`: No IP change was found"
 
