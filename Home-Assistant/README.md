@@ -11,3 +11,6 @@ To run you need to have Debian, Raspbian or Debian derivate operative system alr
 
 To run use:
 bash -c "$(wget -qLO - https://ha-supervised.redfoxy.it)"
+
+# Watch at an example of the script running:
+[![Example of script running](https://raw.githubusercontent.com/RedFoxy/Scripts-and-notes/main/Home-Assistant/home%20assistant%20supervised.jpg)](https://www.youtube.com/watch?v=Ca2rM6A-aiE)
