@@ -31,6 +31,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+alias mioip='echo $(wget -qO- http://ipecho.net/plain)'
+
 # Search the KEYWORD in your history and show only matching result
 alias h='history | awk '"'"'{$1="";print}'"'"' |sed "s/^ *//" |grep -v "^h " | sort | uniq | grep'
 
