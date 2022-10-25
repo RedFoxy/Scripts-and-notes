@@ -31,7 +31,7 @@ cat <<WELCOME
 #                                                                                                  #
 #                           Home Assistant Supervised installation script                          #
 #                                           (unofficial)                                           #
-#                                         v0.8 22/08/2022                                          #
+#                                        v0.8.1 25/10/2022                                         #
 #                               by Massimo "RedFoxy Darrest" Ciccio'                               #
 #                 WebSite: https://redfoxy.it - GitHub: https://github.com/RedFoxy                 #
 #            YouTube: https://youtube.redfoxy.it - Twitter: https://twitter.redfoxy.it             #
@@ -112,7 +112,7 @@ else
 fi
 
 # Install needs
-needs="ca-certificates curl gnupg jq wget lsb-release systemd inetutils-ping apparmor network-manager udisks2 libglib2.0-bin dbus"
+needs="ca-certificates curl gnupg systemd-journal-remote jq wget lsb-release systemd inetutils-ping apparmor network-manager udisks2 libglib2.0-bin dbus"
 
 for pkg in $needs
 do
