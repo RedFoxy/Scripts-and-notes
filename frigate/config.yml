@@ -1,0 +1,134 @@
+mqtt:
+  host: 192.168.1.2
+#  port: 1833
+  user: mqttuser
+  password: mqttpass
+
+birdseye:
+  enabled: False
+
+ffmpeg:
+  global_args:
+    -hide_banner -loglevel warning
+  hwaccel_args:
+    -hwaccel vaapi
+    -hwaccel_device /dev/dri/renderD128
+    -hwaccel_output_format yuv420p
+  input_args: 
+    -avoid_negative_ts make_zero 
+    -fflags +genpts+discardcorrupt 
+  output_args:
+    record:
+      -f segment
+      -segment_time 10
+      -segment_format mp4
+      -reset_timestamps 1
+      -strftime 1
+      -c:v copy
+      -c:a aac
+
+detectors:
+  coral:
+    type: edgetpu
+    device: usb
+
+cameras:
+#---------------------------------------------------- Main Room - ReoLink E1 Pro
+  soggiorno:
+    ffmpeg:
+      inputs:
+        - path: rtsp://$UserName:$Password@10.100.100.31:554/h264Preview_01_main
+          roles:
+            - record
+        - path: rtsp://$UserName:$Password@10.100.100.31:554/h264Preview_01_sub
+          roles:
+            - rtmp
+            - detect
+    detect:
+      enabled: True
+      width: 640
+      height: 360
+      fps: 7
+      max_disappeared: 25
+    motion:
+      mask:
+        - 438,15,440,29,624,29,622,14
+    objects:
+      track:
+        - person
+
+#---------------------------------------------------- Bed room 1 - ReoLink E1 Pro
+  massimo:
+    ffmpeg:
+      inputs:
+        - path: rtsp://$UserName:$Password@10.100.100.33:554/h264Preview_01_main
+          roles:
+            - record
+        - path: rtsp://$UserName:$Password@10.100.100.33:554/h264Preview_01_sub
+          roles:
+            - rtmp
+            - detect
+    detect:
+      enabled: True
+      width: 640
+      height: 360
+      fps: 7
+      max_disappeared: 25
+    motion:
+      mask:
+        - 438,15,440,29,624,29,622,14
+    objects:
+      track:
+        - person
+
+#---------------------------------------------------- Bed room 2
+  mamma:
+    ffmpeg:
+      inputs:
+        - path: rtsp://10.100.100.92/user=$UserName&password=$Password&channel=1&stream=0.sdp?real_stream
+          roles:
+            - record
+        - path: rtsp://10.100.100.92/user=$UserName&password=$Password&channel=1&stream=1.sdp?real_stream
+          roles:
+            - rtmp
+            - detect
+    detect:
+      enabled: True
+      width: 640
+      height: 360
+      fps: 7
+
+    motion:
+      mask:
+        - 494,35,640,119,640,0,502,0
+        - 588,202,501,116,177,131,161,233
+
+    objects:
+      track:
+        - person
+
+timestamp_style:
+  position: "tr"
+  format: "%d/%m/%Y %H:%M:%S"
+  color:
+    red: 255
+    green: 255
+    blue: 255
+  thickness: 2
+  effect: shadow
+
+rtmp:
+  enabled: True
+
+record:
+  enabled: True
+  retain:
+    days: 7
+    mode: motion
+
+  events:
+    pre_capture: 5
+    post_capture: 5
+    retain:
+      default: 2
+      mode: active_objects
