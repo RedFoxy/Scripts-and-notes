@@ -1,4 +1,4 @@
-# Scrpit-and-notes
+# Script-and-notes
 Just a collection of differents useful files that I refer in different guides
 
 # [DBBackup](DBBackup/README.md)
