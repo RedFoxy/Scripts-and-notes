@@ -4,7 +4,7 @@
 #                                                                              !
 #                          Use this to run the script:                         !
 #                                                                              !
-#          bash -c "$(wget -qLO - https://ha-supervised.redfoxy.it)"           !
+#          bash -c "$(wget -qLO - https://hasupervised.redfoxy.it)"           !
 #                                                                              !
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
