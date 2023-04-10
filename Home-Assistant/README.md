@@ -3,7 +3,8 @@
 Collections of scripts about Home Assistant
 
 # Home Assistant Supervised installation script ![English](https://img.shields.io/badge/-english-blue)
-<a href="https://www.buymeacoffee.com/redfoxydarrest" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+<a href="https://paypal.me/redfoxydarrest" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 [install-supervised.sh](install-supervised.sh)
 
@@ -21,7 +22,7 @@ bash -c "$(wget -qLO - https://hasupervised.redfoxy.it)"
 
 # Home Assistant Supervised installation script ![Italiano](https://img.shields.io/badge/-italiano-blue)
 
-<a href="https://www.buymeacoffee.com/redfoxydarrest" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://paypal.me/redfoxydarrest" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 [install-supervised.sh](install-supervised.sh)
 
