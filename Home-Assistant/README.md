@@ -2,6 +2,8 @@
 
 Collections of scripts about Home Assistant
 
+<a href="https://www.buymeacoffee.com/redfoxydarrest" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 # Home Assistant Supervised installation script ![English](https://img.shields.io/badge/-english-blue)
 [install-supervised.sh](install-supervised.sh)
 
