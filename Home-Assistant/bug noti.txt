@@ -1,0 +1,2 @@
+- l'installazioen di network-manager resetta la rete nel 90% dei casi
+   - Soluzione: Fare un sistema che chiede in cascata quale scheda di rete o impostazione prendere per la rete e configurarne una nuova
